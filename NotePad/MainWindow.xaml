@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:NotePad"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF82C3FF">
+        <Button x:Name="btnOpen" Content="開啟檔案" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="58"/>
+        <Button x:Name="btnSave" Content="存檔" HorizontalAlignment="Left" Margin="86,10,0,0" VerticalAlignment="Top" Height="28" Width="58"/>
+        <RichTextBox x:Name="rtbText" Height="NaN" Margin="10,43,10,10" Width="NaN">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
     </Grid>
 </Window>

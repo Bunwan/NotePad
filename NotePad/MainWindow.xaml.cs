@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO; // 要引用這個IO函式庫，才能作檔案處理
+using Microsoft.Win32; // 引用視窗物件函式庫
 
 namespace NotePad
 {
@@ -29,7 +30,7 @@ namespace NotePad
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             // 開啟一個存檔對話框
-            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+            SaveFileDialog dlg = new SaveFileDialog();
             // 設定檔案過濾，可以選擇只顯示純文字檔（*.txt）
             dlg.Filter = "純文字資料 (*.txt)|*.txt|All files (*.*)|*.*";
             // ShowDialog() 來顯示對話框，如果點選確認按鍵，會等於 true
@@ -49,7 +50,7 @@ namespace NotePad
         private void btnOpen_Click(object sender, RoutedEventArgs e)
         {
             // 開啟一個開啟檔案對話框
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            OpenFileDialog dlg = new OpenFileDialog();
             dlg.Filter = "純文字資料 (*.txt)|*.txt|All files (*.*)|*.*";
             // ShowDialog() 來顯示對話框，如果點選開啟按鍵，會等於 true
             if (dlg.ShowDialog() == true)
